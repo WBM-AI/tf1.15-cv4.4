@@ -10,7 +10,7 @@ RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security ma
   unzip \
   yasm \
   pkg-config \
-  gunicorn \
+  # gunicorn3 \
   # image formats support
   libtbb2 \
   libtbb-dev \
@@ -62,17 +62,19 @@ RUN wget https://github.com/opencv/opencv/archive/4.4.0.zip \
   && ldconfig
 
 # Python dependencies
-RUN pip --no-cache-dir install \
+RUN python3 -m pip --no-cache-dir install \
   cython \
   'numpy<1.19.0' \
   hdf5storage \
   h5py \
   scipy \
   py3nvml \
-  keras \
+  'Keras-Applications==1.0.8' \
+  'Keras-Preprocessing==1.1.2' \
   Pillow \
   pandas \
   matplotlib \
   jsonschema \
-  html5lib && \
-  pip install --no-binary :all: falcon
+  Keras \
+  gunicorn==20.0.4 \
+  html5lib && python3 -m pip install --no-binary :all: falcon
