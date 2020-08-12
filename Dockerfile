@@ -62,7 +62,7 @@ RUN wget https://github.com/opencv/opencv/archive/4.4.0.zip \
   && ldconfig
 
 # Python dependencies
-RUN pip --no-cache-dir install \
+RUN python3 -m pip --no-cache-dir install \
   cython \
   'numpy<1.19.0' \
   hdf5storage \
@@ -75,4 +75,4 @@ RUN pip --no-cache-dir install \
   matplotlib \
   jsonschema \
   html5lib && \
-  pip install --no-binary :all: falcon
+  python3 -m pip install --no-binary :all: falcon
