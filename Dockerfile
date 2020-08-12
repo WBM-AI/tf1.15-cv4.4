@@ -10,7 +10,7 @@ RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security ma
   unzip \
   yasm \
   pkg-config \
-  gunicorn \
+  gunicorn3 \
   # image formats support
   libtbb2 \
   libtbb-dev \
