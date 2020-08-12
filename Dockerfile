@@ -10,15 +10,9 @@ RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security ma
   unzip \
   yasm \
   pkg-config \
-  <<<<<<< HEAD
-# gunicorn3 \
-||||||| 284393e
-gunicorn \
-  =======
-gunicorn3 \
-  >>>>>>> 7b906faeb95fbddd391bfcafc4e3ecbe463e4321
-# image formats support
-libtbb2 \
+  # gunicorn3 \
+  # image formats support
+  libtbb2 \
   libtbb-dev \
   libjpeg-dev \
   libpng-dev \
