@@ -74,4 +74,5 @@ RUN pip --no-cache-dir install \
   pandas \
   matplotlib \
   jsonschema \
-  html5lib && pip install --no-binary :all: falcon
+  html5lib && \
+  pip install --no-binary :all: falcon
